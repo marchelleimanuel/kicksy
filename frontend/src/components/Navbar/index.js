@@ -17,8 +17,6 @@ export const NavBar = (props) => {
             <div className="border-b-2 border-black border-opacity-25 h-[100px] flex items-center justify-between px-11 sticky top-0 bg-white z-10">
                 <div className="flex flex-col justify-center cursor-pointer">
                     <span className="border-2 border-black w-7"></span>
-                    <span className="border-2 border-black w-7 my-1"></span>
-                    <span className="border-2 border-black w-7"></span>
                 </div>
 
                 <div>
