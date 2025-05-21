@@ -6,6 +6,12 @@ import arrow from "../../assets/images/arrow.png"
 import pinkShoes from "../../assets/images/sepatu_1.png"
 import redShoes from "../../assets/images/sepatu_2.png"
 import beigeShoes from "../../assets/images/sepatu_3.png"
+import sepatu_4 from "../../assets/images/sepatu_4.png"
+import sepatu_5 from "../../assets/images/sepatu_5.png"
+import sepatu_6 from "../../assets/images/sepatu_6.png"
+import sepatu_7 from "../../assets/images/sepatu_7.png"
+import sepatu_8 from "../../assets/images/sepatu_8.png"
+import sepatu_9 from "../../assets/images/sepatu_9.png"
 import Carousel3D from "../../Carousel3D";
 
 export const UserHome = () => {
@@ -19,6 +25,10 @@ export const UserHome = () => {
     
     const goToLoginPage = () => {
         navigate('/login');
+    }
+
+    const goToOrderPage = () => {
+        navigate('/order');
     }
 
     const onLogOut = () => {
@@ -60,6 +70,27 @@ export const UserHome = () => {
                 }}>
             </div>
     }
+
+    const shoesCard = (shoes) => {
+        return <div className="inline-block font-openSans font-bold cursor-pointer" onClick={goToOrderPage}>
+            <div 
+                style={{
+                    backgroundImage: `url(${shoes})`, 
+                    width: '500px', 
+                    height: '500px', 
+                    backgroundPosition: 'center', 
+                    backgroundRepeat: 'no-repeat', 
+                    backgroundSize: 'cover',
+                }}> 
+            </div> 
+            <p className="text-[20px] text-[#DC6249] mt-5">Best Seller</p>
+            <p className="text-[16px]">Nike Air Max Dn8</p>
+            <p className="text-[16px] text-[#999999]" >Men's Shoes</p>
+            <p className="text-[16px] text-[#999999]">1 Colour</p>
+
+            <p className="text-[20px] mt-5">Rp.3.049.000</p>
+        </div>
+    }
     
     return(
         <>  
@@ -88,6 +119,15 @@ export const UserHome = () => {
                 {Carousel3D}
 
                 {/* <div className="cursor-pointer" style={{backgroundImage: `url(${arrow})`, width: '36px', height: '72px', backgroundPosition: 'center'}}></div> */}
+            </div>
+
+            <div className="border-2 border-red-500 flex gap-6 flex-wrap justify-center mt-32">
+                {shoesCard(sepatu_4)}
+                {shoesCard(sepatu_5)}
+                {shoesCard(sepatu_6)}
+                {shoesCard(sepatu_7)}
+                {shoesCard(sepatu_8)}
+                {shoesCard(sepatu_9)}
             </div>
         </>
     )
