@@ -21,7 +21,7 @@ const userLogin = async (req,res) => {
         
         if(!user) return res.status(404).json({
             response_code: constant.RESPONSE_INVALID_CODE,
-            messages: 'Email/Username doesn\'t exist'
+            messages: 'Email/Username doesn\'t ada'
         });
 
         const comparePassword = await bcrypt.compare(password, user.password);
